@@ -49,15 +49,9 @@ else
     sleep 2s
     DIFF=$((100-1+1))
     CHANCE=$(($(($RANDOM%$DIFF))+1))
-    if [[ $CHANCE -gt 30 ]]
-    then
-        echo "${NC}Finishing up..."
-    else
-        echo "${RED}Process has been compromised!  Aborting hack on $hackname's computer...${NC}"
-        sleep 1.5s
-        echo "${RED}Removing hack..."
-        sleep 3s
-        echo "${RED}Hack successfully removed!  Trying again..."
+    while [[ $CHANCE -lt 50 ]]
+    do
+        echo "${RED}Byte sequence cover-up failed!  Removing hack and trying again..."
         sleep 2s
         echo "${GREEN}Successfully injected hack client into $hackname's computer!${NC}"
         sleep 0.5s
@@ -91,19 +85,7 @@ else
         sleep 1.5s
         echo "${NC}Writing out byte sequence to $hackname's computer..."
         sleep 2s
-        DIFF=$((100-1+1))
         CHANCE=$(($(($RANDOM%$DIFF))+1))
-        if [[ $CHANCE -gt 30 ]]
-        then
-            echo "${NC}Finishing up..."
-        else
-            echo "${RED}Process has been compromised!  Aborting hack on $hackname's computer...${NC}"
-            sleep 1.5s
-            echo "${RED}Removing hack..."
-            sleep 3s
-            echo "${RED}Hack successfully removed!  Whole process aborted."
-        fi
-    fi
-    sleep 4.5s
+    done
     echo "${GREEN}Done!${NC}"
 fi
