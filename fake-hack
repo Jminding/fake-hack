@@ -5,39 +5,105 @@ NC='\033[0m'
 echo What is the name of the person you would like me to hack?
 read hackname
 echo Hacking $hackname...
-sleep 2s
-echo "${GREEN}Successfully injected hack client into $hackname's computer!${NC}"
-sleep 0.5s
-echo "Getting all of $hackname's personal information..."
-sleep 1.5s
-echo "${GREEN}Personal information retrieval successful!${NC}"
-sleep 0.5s
-echo "Spending $hackname's credit card money..."
-sleep 2s
-DIFF=$((200000-10000+1))
-R=$(($(($RANDOM%$DIFF))+10000))
-echo "${GREEN}Successfully spent \$$R of $hackname's money!${NC}"
-sleep 1s
-echo "Attempting to retrieve $hackname's IP address..."
-sleep 5s
-DIFF=$((99-10+1))
-IP=$(($(($RANDOM%$DIFF))+10))
-DIFF2=$((999-100+1))
-IP2=$(($(($RANDOM%$DIFF2))+100))
-DIFF3=$((99-10+1))
-IP3=$(($(($RANDOM%$DIFF3))+10))
-DIFF4=$((99-10+1))
-IP4=$(($(($RANDOM%$DIFF4))+10))
-echo "${GREEN}$hackname's IP address: 1$IP.$IP2.$IP3.$IP4"
-sleep 3s
-echo "${NC}Generating random byte sequence to cover up the hack...${GREEN}"
-sleep 2.5s
-DIFF=$((100000000-1000000+1))
-RANDBYTESEQ=$(($(($RANDOM%$DIFF))+ 1000000))
-LC_ALL=C tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' </dev/urandom | head -c $RANDBYTESEQ ; echo
-sleep 1.5s
-echo "${NC}Writing out byte sequence to $hackname's computer..."
-sleep 2s
-echo "${NC}Finishing up..."
-sleep 4.5s
-echo "${GREEN}Done!${NC}"
+DIFF=$((100-1+1))
+CHANCE=$(($(($RANDOM%$DIFF))+1))
+if [[ $CHANCE -lt 30 ]]
+then
+    sleep 2s
+    echo "${RED}Hack failed!  Locked out of $hackname's computer.  Aborting process...${NC}"
+    sleep 2s
+    echo "${RED}Process aborted!${NC}"
+else
+    sleep 2s
+    echo "${GREEN}Successfully injected hack client into $hackname's computer!${NC}"
+    sleep 0.5s
+    echo "Getting all of $hackname's personal information..."
+    sleep 1.5s
+    echo "${GREEN}Personal information retrieval successful!${NC}"
+    sleep 0.5s
+    echo "Spending $hackname's credit card money..."
+    sleep 2s
+    DIFF=$((200000-10000+1))
+    R=$(($(($RANDOM%$DIFF))+10000))
+    echo "${GREEN}Successfully spent \$$R of $hackname's money!${NC}"
+    sleep 1s
+    echo "Attempting to retrieve $hackname's IP address..."
+    sleep 5s
+    DIFF=$((99-10+1))
+    IP=$(($(($RANDOM%$DIFF))+10))
+    DIFF2=$((999-100+1))
+    IP2=$(($(($RANDOM%$DIFF2))+100))
+    DIFF3=$((99-10+1))
+    IP3=$(($(($RANDOM%$DIFF3))+10))
+    DIFF4=$((99-10+1))
+    IP4=$(($(($RANDOM%$DIFF4))+10))
+    echo "${GREEN}$hackname's IP address: 1$IP.$IP2.$IP3.$IP4"
+    sleep 3s
+    echo "${NC}Generating random byte sequence to cover up the hack...${GREEN}"
+    sleep 2.5s
+    DIFF=$((100000000-1000000+1))
+    RANDBYTESEQ=$(($(($RANDOM%$DIFF))+ 1000000))
+    LC_ALL=C tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' </dev/urandom | head -c $RANDBYTESEQ ; echo
+    sleep 1.5s
+    echo "${NC}Writing out byte sequence to $hackname's computer..."
+    sleep 2s
+    DIFF=$((100-1+1))
+    CHANCE=$(($(($RANDOM%$DIFF))+1))
+    if [[ $CHANCE -gt 30 ]]
+    then
+        echo "${NC}Finishing up..."
+    else
+        echo "${RED}Process has been compromised!  Aborting hack on $hackname's computer...${NC}"
+        sleep 1.5s
+        echo "${RED}Removing hack..."
+        sleep 3s
+        echo "${RED}Hack successfully removed!  Trying again..."
+        sleep 2s
+        echo "${GREEN}Successfully injected hack client into $hackname's computer!${NC}"
+        sleep 0.5s
+        echo "Getting all of $hackname's personal information..."
+        sleep 1.5s
+        echo "${GREEN}Personal information retrieval successful!${NC}"
+        sleep 0.5s
+        echo "Spending $hackname's credit card money..."
+        sleep 2s
+        DIFF=$((200000-10000+1))
+        R=$(($(($RANDOM%$DIFF))+10000))
+        echo "${GREEN}Successfully spent \$$R of $hackname's money!${NC}"
+        sleep 1s
+        echo "Attempting to retrieve $hackname's IP address..."
+        sleep 5s
+        DIFF=$((99-10+1))
+        IP=$(($(($RANDOM%$DIFF))+10))
+        DIFF2=$((999-100+1))
+        IP2=$(($(($RANDOM%$DIFF2))+100))
+        DIFF3=$((99-10+1))
+        IP3=$(($(($RANDOM%$DIFF3))+10))
+        DIFF4=$((99-10+1))
+        IP4=$(($(($RANDOM%$DIFF4))+10))
+        echo "${GREEN}$hackname's IP address: 1$IP.$IP2.$IP3.$IP4"
+        sleep 3s
+        echo "${NC}Generating random byte sequence to cover up the hack...${GREEN}"
+        sleep 2.5s
+        DIFF=$((100000000-1000000+1))
+        RANDBYTESEQ=$(($(($RANDOM%$DIFF))+ 1000000))
+        LC_ALL=C tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' </dev/urandom | head -c $RANDBYTESEQ ; echo
+        sleep 1.5s
+        echo "${NC}Writing out byte sequence to $hackname's computer..."
+        sleep 2s
+        DIFF=$((100-1+1))
+        CHANCE=$(($(($RANDOM%$DIFF))+1))
+        if [[ $CHANCE -gt 30 ]]
+        then
+            echo "${NC}Finishing up..."
+        else
+            echo "${RED}Process has been compromised!  Aborting hack on $hackname's computer...${NC}"
+            sleep 1.5s
+            echo "${RED}Removing hack..."
+            sleep 3s
+            echo "${RED}Hack successfully removed!  Whole process aborted."
+        fi
+    fi
+    sleep 4.5s
+    echo "${GREEN}Done!${NC}"
+fi
