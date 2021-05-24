@@ -1,7 +1,7 @@
 # fake-hack
 A totally real hack script for terminal
 
-[**Download the latest release**](https://github.com/Jminding/fake-hack/releases)
+[**Download `fake-hack.zip` from the latest release**](https://github.com/Jminding/fake-hack/releases)
 
 Bascially this is a script where you input the name of someone you want to hack and it will *definitely* hack them.
 
