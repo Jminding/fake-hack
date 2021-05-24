@@ -1,4 +1,4 @@
-# fake-hack [![](https://img.shields.io/badge/Download-1.0-green)](https://github.com/Jminding/fake-hack/releases/download/v1.0/fake-hack.zip)
+# fake-hack
 A totally real hack script for terminal
 
 Bascially this is a script where you input the name of someone you want to hack and it will *definitely* hack them.
